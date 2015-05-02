@@ -83,6 +83,7 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         OpenFileDialog.ShowDialog()
+        Button5.Enabled = True
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -96,7 +97,7 @@ Public Class Form1
         If FolderBrowserDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             Dim Directory As New DirectoryInfo(FolderBrowserDialog.SelectedFolder)
             For Each File In Directory.GetFiles
-                If File.Extension = ".png" Or File.Extension = ".jpg" Or File.Extension = ".jpeg" Then
+                If File.Extension.ToLower = ".png" Or File.Extension.ToLower = ".jpg" Or File.Extension.ToLower = ".jpeg" Or File.Extension.ToLower = ".bmp" Then
                     If Not list.Contains(File.FullName) Then
                         Dim Item As New ListViewItem(File.Name)
                         Item.SubItems.Add(Path.GetDirectoryName(File.FullName))
@@ -113,12 +114,16 @@ Public Class Form1
                 MessageBox.Show(sb.ToString)
             End If
         End If
+
+        Button5.Enabled = True
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         For Each Item As ListViewItem In ListView1.SelectedItems
             Item.Remove()
         Next
+
+        Button5.Enabled = False
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

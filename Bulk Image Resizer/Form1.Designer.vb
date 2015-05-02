@@ -43,6 +43,8 @@ Partial Class Form1
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -58,8 +60,6 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.OutputDirectoryTextBox = New System.Windows.Forms.TextBox()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,8 +171,8 @@ Partial Class Form1
         'OpenFileDialog
         '
         Me.OpenFileDialog.FileName = "OpenFileDialog1"
-        Me.OpenFileDialog.Filter = "All supported image files|*.png;*.jpg;*.jpeg;|PNG files|*.png|JPEG files|*.jpg;*." & _
-    "jpeg"
+        Me.OpenFileDialog.Filter = "All supported image files|*.png;*.jpg;*.jpeg;*.bmp|PNG files|*.png|JPEG files|*.j" & _
+    "pg;*.jpeg|BMP Files|*.bmp"
         Me.OpenFileDialog.Multiselect = True
         '
         'ComboBox1
@@ -194,7 +194,7 @@ Partial Class Form1
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(820, 23)
         Me.Button5.TabIndex = 6
-        Me.Button5.Text = "Resize!"
+        Me.Button5.Text = "Convert && Resize!"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'ComboBox2
@@ -265,6 +265,28 @@ Partial Class Form1
         Me.GroupBox3.TabIndex = 12
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Size"
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(10, 44)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(104, 17)
+        Me.RadioButton2.TabIndex = 13
+        Me.RadioButton2.Text = "Relative Size (%)"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(10, 19)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(109, 17)
+        Me.RadioButton1.TabIndex = 12
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Absolute Size (px)"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -419,28 +441,6 @@ Partial Class Form1
         Me.Button6.TabIndex = 17
         Me.Button6.Text = "Browse..."
         Me.Button6.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(10, 19)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(109, 17)
-        Me.RadioButton1.TabIndex = 12
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Absolute Size (px)"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(10, 44)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(104, 17)
-        Me.RadioButton2.TabIndex = 13
-        Me.RadioButton2.Text = "Relative Size (%)"
-        Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'Form1
         '
