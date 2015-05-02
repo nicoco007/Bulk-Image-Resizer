@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F4B8F006-AF6B-464E-B054-1FDBEB463E10}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Bulk Image Resizer.My.MyApplication</StartupObject>
-    <RootNamespace>Bulk Image Resizer</RootNamespace>
+    <StartupObject>Bulk_Image_Resizer.My.MyApplication</StartupObject>
+    <RootNamespace>Bulk_Image_Resizer</RootNamespace>
     <AssemblyName>Bulk Image Resizer</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>

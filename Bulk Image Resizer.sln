@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bulk Image Resizer", "Bulk Image Resizer\Bulk Image Resizer.vbproj", "{F4B8F006-AF6B-464E-B054-1FDBEB463E10}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bulk_Image_Resizer", "Bulk Image Resizer\Bulk_Image_Resizer.vbproj", "{F4B8F006-AF6B-464E-B054-1FDBEB463E10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

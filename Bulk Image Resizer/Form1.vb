@@ -159,9 +159,16 @@ Public Class Form1
         Dim ItemNumber As Integer = 0
         For Each Item As ListViewItem In Items
             Dim Original As Image = Image.FromFile(Item.Tag)
-            Dim Resized As Image = ResizeImage(Original, New Size(NumericUpDown1.Value, NumericUpDown2.Value), InterpolationMode)
+            Dim Resized As Image
+
+            If (RadioButton1.Checked) Then
+                Resized = ResizeImage(Original, New Size(NumericUpDown1.Value, NumericUpDown2.Value), InterpolationMode)
+            Else
+                Resized = ResizeImage(Original, New Size(NumericUpDown1.Value / 100 * Original.Width, NumericUpDown2.Value / 100 * Original.Height), InterpolationMode)
+            End If
+
             Dim Stream As New MemoryStream
-            If ReplaceFrom = "" Then
+            If String.IsNullOrEmpty(ReplaceFrom) Then
                 Resized.Save(OutputFolder & "\" & Prefix & Item.Name & Suffix & "." & ImageFormat.ToString.ToLower, ImageFormat)
             Else
                 Resized.Save(OutputFolder & "\" & Prefix & Item.Name.Replace(ReplaceFrom, ReplaceTo) & Suffix & "." & ImageFormat.ToString.ToLower, ImageFormat)

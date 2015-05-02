@@ -58,6 +58,8 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.OutputDirectoryTextBox = New System.Windows.Forms.TextBox()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,25 +209,21 @@ Partial Class Form1
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NumericUpDown1.Location = New System.Drawing.Point(51, 19)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(175, 19)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(155, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(55, 20)
         Me.NumericUpDown1.TabIndex = 8
         Me.NumericUpDown1.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'NumericUpDown2
         '
-        Me.NumericUpDown2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NumericUpDown2.Location = New System.Drawing.Point(51, 45)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(175, 45)
         Me.NumericUpDown2.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
         Me.NumericUpDown2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(155, 20)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(55, 20)
         Me.NumericUpDown2.TabIndex = 9
         Me.NumericUpDown2.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
@@ -255,13 +253,15 @@ Partial Class Form1
         'GroupBox3
         '
         Me.GroupBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox3.Controls.Add(Me.RadioButton2)
+        Me.GroupBox3.Controls.Add(Me.RadioButton1)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox3.Controls.Add(Me.NumericUpDown2)
         Me.GroupBox3.Location = New System.Drawing.Point(149, 281)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(212, 76)
+        Me.GroupBox3.Size = New System.Drawing.Size(240, 102)
         Me.GroupBox3.TabIndex = 12
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Size"
@@ -269,7 +269,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 47)
+        Me.Label2.Location = New System.Drawing.Point(131, 47)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 11
@@ -278,7 +278,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 21)
+        Me.Label1.Location = New System.Drawing.Point(131, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 10
@@ -306,33 +306,37 @@ Partial Class Form1
         Me.GroupBox5.Controls.Add(Me.ReplaceCheckBox)
         Me.GroupBox5.Controls.Add(Me.SuffixCheckBox)
         Me.GroupBox5.Controls.Add(Me.PrefixCheckBox)
-        Me.GroupBox5.Location = New System.Drawing.Point(367, 281)
+        Me.GroupBox5.Location = New System.Drawing.Point(395, 281)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(465, 94)
+        Me.GroupBox5.Size = New System.Drawing.Size(437, 102)
         Me.GroupBox5.TabIndex = 14
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Renaming options"
         '
         'SuffixTextBox
         '
+        Me.SuffixTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SuffixTextBox.Location = New System.Drawing.Point(78, 42)
         Me.SuffixTextBox.Name = "SuffixTextBox"
-        Me.SuffixTextBox.Size = New System.Drawing.Size(260, 20)
+        Me.SuffixTextBox.Size = New System.Drawing.Size(352, 20)
         Me.SuffixTextBox.TabIndex = 7
         Me.SuffixTextBox.Text = "_resized"
         '
         'PrefixTextBox
         '
+        Me.PrefixTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PrefixTextBox.Enabled = False
         Me.PrefixTextBox.Location = New System.Drawing.Point(78, 19)
         Me.PrefixTextBox.Name = "PrefixTextBox"
-        Me.PrefixTextBox.Size = New System.Drawing.Size(375, 20)
+        Me.PrefixTextBox.Size = New System.Drawing.Size(352, 20)
         Me.PrefixTextBox.TabIndex = 6
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(195, 68)
+        Me.Label3.Location = New System.Drawing.Point(241, 68)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(26, 13)
         Me.Label3.TabIndex = 5
@@ -341,9 +345,9 @@ Partial Class Form1
         'ReplaceToTextBox
         '
         Me.ReplaceToTextBox.Enabled = False
-        Me.ReplaceToTextBox.Location = New System.Drawing.Point(223, 65)
+        Me.ReplaceToTextBox.Location = New System.Drawing.Point(273, 65)
         Me.ReplaceToTextBox.Name = "ReplaceToTextBox"
-        Me.ReplaceToTextBox.Size = New System.Drawing.Size(115, 20)
+        Me.ReplaceToTextBox.Size = New System.Drawing.Size(157, 20)
         Me.ReplaceToTextBox.TabIndex = 4
         '
         'ReplaceFromTextBox
@@ -351,7 +355,7 @@ Partial Class Form1
         Me.ReplaceFromTextBox.Enabled = False
         Me.ReplaceFromTextBox.Location = New System.Drawing.Point(78, 65)
         Me.ReplaceFromTextBox.Name = "ReplaceFromTextBox"
-        Me.ReplaceFromTextBox.Size = New System.Drawing.Size(115, 20)
+        Me.ReplaceFromTextBox.Size = New System.Drawing.Size(157, 20)
         Me.ReplaceFromTextBox.TabIndex = 3
         '
         'ReplaceCheckBox
@@ -415,6 +419,28 @@ Partial Class Form1
         Me.Button6.TabIndex = 17
         Me.Button6.Text = "Browse..."
         Me.Button6.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(10, 19)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(109, 17)
+        Me.RadioButton1.TabIndex = 12
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Absolute Size (px)"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(10, 44)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(104, 17)
+        Me.RadioButton2.TabIndex = 13
+        Me.RadioButton2.Text = "Relative Size (%)"
+        Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -484,5 +510,7 @@ Partial Class Form1
     Friend WithEvents OutputDirectoryTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
 
 End Class
